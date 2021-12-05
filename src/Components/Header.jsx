@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import Gambar from '../../public/Images/header-image.png'
 import { Link, useLocation } from "react-router-dom";
 import { WindowView, SmoothScroll } from "./Viewport";
 
@@ -47,9 +46,9 @@ function Header() {
                 <Navbar />
                 <div className='hero'>
                     <div className='kiri'>
-                        <p className='dark-teks'>Unlimited <span className='ungu-teks'>Creativity</span></p>
-                        <p className='dark-teks'>With The <span className='ungu-teks'>Best Quality</span></p>
-                        <p className='teks-definisi'>Create a design to make it easier to promote your product</p>
+                        <p className='teks-hello'>Hello</p>
+                        <p className='teks-gerak'>Im Daniansyah</p>
+                        <p className='teks-definisi'>Are u know me so well? Let me introduce myself :)</p>
                         <div className="container">
                             <Link to="/" className="teks-button-gts" name="gimmick">
                                 Get Started
@@ -57,7 +56,7 @@ function Header() {
                         </div>
                     </div>
                     <div className='gambar-header'>
-                        <img src={Gambar} alt="" className='gambar-header' />
+                        <img src={`${process.env.PUBLIC_URL}/header-image.png`} alt="" className='gambar-header' />
                     </div>
                 </div>
             </div>

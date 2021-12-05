@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import LogoNavbar from '../../public/Icon/LogoNavbar.svg'
-import MenuIcon from '../../public/Icon/Menu.svg'
-import CloseIcon from '../../public/Icon/Close.svg'
 import { Link, useLocation } from "react-router-dom";
 import { WindowView, SmoothScroll } from "./Viewport";
 import { bubble as Menu } from 'react-burger-menu'
@@ -60,8 +57,8 @@ function Navbar() {
         <>
             <nav className={nav ? 'nav active' : 'nav'}>
                 <div className="link-con logo-gambar">
-                    <Link to="/" className="navi-link" name="main">
-                        <img className="logo" src={LogoNavbar} alt="" />
+                    <Link to="/" className="navi-link logo-gambar" name="main">
+                        <img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" />
                     </Link>
                 </div>
 
@@ -79,12 +76,12 @@ function Navbar() {
             </nav>
 
             <Menu
-                customBurgerIcon={<img className="menu-icon" src={MenuIcon} alt="" />}
-                customCrossIcon={<img className="close-icon" src={CloseIcon} alt="" />}>
+                customBurgerIcon={<img className="menu-icon" src={`${process.env.PUBLIC_URL}/Menu.svg`} alt="" />}
+                customCrossIcon={<img className="close-icon" src={`${process.env.PUBLIC_URL}/Close.svg`} alt="" />}>
                 <nav className='navi'>
                     <div className="link-con menu">
                         <Link to="/" className="navi-link" name="main">
-                            <img className="logo" src={LogoNavbar} alt="" />
+                            <img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" />
                         </Link>
                         <Link to="/" className="navi-link" name="aboutus">
                             Project
