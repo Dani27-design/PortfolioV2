@@ -7,6 +7,7 @@ import Tilt from 'react-parallax-tilt';
 
 function Header() {
     const [anime, setanime] = useState(false);
+    const [theme, setTheme] = useState(false);
 
     const setActive = () => {
         if (window.scrollY >= 50) {
@@ -16,6 +17,12 @@ function Header() {
         }
     }
     window.addEventListener('scroll', setActive);
+
+    if (theme) {
+        document.body.classList.add("light-theme");
+    } else {
+        document.body.classList.remove("light-theme");
+    }
 
     const { y_top } = WindowView();
     const { pathname } = useLocation();
@@ -96,7 +103,7 @@ function Header() {
                         </div>
                     </Tilt>
                 </div>
-                <img height="100" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
+                <img id="theme" name="main" onClick={() => setTheme(!theme)} height="100" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
             </div>
         </>
     )

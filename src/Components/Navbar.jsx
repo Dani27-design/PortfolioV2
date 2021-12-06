@@ -58,7 +58,7 @@ function Navbar() {
         <>
             <nav className={nav ? 'nav active' : 'nav'}>
                 <div className="link-con logo-gambar">
-                    <a href="main" className="navi-link"><img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" /></a>
+                    <a href="main" className="navi-link logo-navbar">DC<img className="dot-navbar" src={`${process.env.PUBLIC_URL}/dot-navbar.png`} alt="" /></a>
                 </div>
 
                 <div className="link-con menu">
