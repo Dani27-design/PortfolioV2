@@ -1,15 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Navbar from './Navbar'
 import { Link, useLocation } from "react-router-dom";
 import { WindowView, SmoothScroll } from "./Viewport";
+import Typed from 'typed.js';
+import Tilt from 'react-parallax-tilt';
 
 function Header() {
+    const [anime, setanime] = useState(false);
+
+    const setActive = () => {
+        if (window.scrollY >= 50) {
+            setanime(true);
+        } else {
+            setanime(false);
+        }
+    }
+    window.addEventListener('scroll', setActive);
+
     const { y_top } = WindowView();
     const { pathname } = useLocation();
     let timer = 0;
 
     useEffect(() => {
-        const links = document.querySelectorAll(".container .teks-button-gts");
+        const links = document.querySelectorAll(".container-button .button");
 
         if (pathname !== "/") {
             timer = 100;
@@ -40,6 +53,24 @@ function Header() {
         }
     }, [y_top]);
 
+    const TeksGerak = () => {
+        const typeTarget = useRef(null);
+
+        useEffect(() => {
+            const typed = new Typed(typeTarget.current, {
+                strings: ["Daniansyah", "Frontend Developer", "Mobile Developer", "UI Designer"],
+                typeSpeed: 40,
+                loop: true
+            });
+
+            return () => {
+                typed.destroy();
+            };
+        }, []);
+
+        return <span ref={typeTarget} />;
+    };
+
     return (
         <>
             <div id='main'>
@@ -47,18 +78,26 @@ function Header() {
                 <div className='hero'>
                     <div className='kiri'>
                         <p className='teks-hello'>Hello</p>
-                        <p className='teks-gerak'>Im Daniansyah</p>
-                        <p className='teks-definisi'>Are u know me so well? Let me introduce myself :)</p>
-                        <div className="container">
-                            <Link to="/" className="teks-button-gts" name="gimmick">
-                                Get Started
+                        <div className="container-teks-gerak">
+                            <p className='teks-gerak'>Im <TeksGerak /></p>
+                            <img src={`${process.env.PUBLIC_URL}/dot.svg`} alt="" className="dot" />
+                        </div>
+                        <p className='teks-about'>Are u know me so well? Let me introduce myself :)</p>
+                        <div className="container-button">
+                            <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Hire Me</a>
+                            <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Get CV</a>
+                            <Link to="/" className="button" name="gimmick">
+                                Project
                             </Link>
                         </div>
                     </div>
-                    <div className='gambar-header'>
-                        <img src={`${process.env.PUBLIC_URL}/header-image.png`} alt="" className='gambar-header' />
-                    </div>
+                    <Tilt reset={false}>
+                        <div className='gambar-header'>
+                            <img src={`${process.env.PUBLIC_URL}/header-image.png`} alt="" className='gambar-header' />
+                        </div>
+                    </Tilt>
                 </div>
+                <img height="100" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
             </div>
         </>
     )

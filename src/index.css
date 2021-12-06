@@ -43,6 +43,7 @@ a {
 
 #main {
   width: 100%;
+  height: 587px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,7 +54,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 8px 100px;
+  padding: 8px 8.984375vw;
   align-items: center;
   position: fixed;
   left: 0;
@@ -74,7 +75,7 @@ nav {
 .navi-link {
   font-family: 'Poppins';
   line-height: 33px;
-  padding: 0px 15px;
+  padding: 0px 20px;
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: 600;
@@ -84,42 +85,18 @@ nav {
 
 .navi-link:hover {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all ease 0.2s;
-}
-
-.btn-subs {
-  width: 100px;
-  height: 40px;
-  border: 2px solid #664CAD;
-  color: #664CAD;
-  font-family: 'Poppins';
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 10px;
-  transition: 0.2s ease-in-out;
-}
-
-.btn-subs:hover {
-  background-color: #664CAD;
-  color: #fff;
-  font-family: 'Poppins';
-  transition: all ease 0.2s;
-  cursor: pointer;
+  color: #FF0000;
 }
 
 .hero {
   width: 82vw;
-  height: 587px;
   display: flex;
   flex-direction: row;
+  align-self: center;
   align-items: center;
   justify-content: space-between;
-}
-
-.aksen {
-  margin-top: 80px;
-  position: relative;
 }
 
 .gambar-header {
@@ -133,42 +110,91 @@ nav {
 }
 
 .kiri {
-  height: 469.6px;
-  width: 40vw;
-  padding-top: 88.05px;
-  align-self: flex-end;
-}
-
-.dark-teks {
-  font-family: 'Poppins';
-  font-weight: 700;
-  font-size: 40px;
-  color: #404040;
-  line-height: 0.9;
+  height: 236px;
 }
 
 .teks-hello {
   font-family: 'Poppins';
-  font-weight: 700;
-  font-size: 80px;
+  font-weight: 600;
+  font-size: 70px;
   color: #fff;
-  line-height: 0.9;
+  margin: 0px 0px 10px 0px;
+}
+
+.container-teks-gerak {
+  display: flex;
+  flex-direction: row;
 }
 
 .teks-gerak {
   font-family: 'Poppins';
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
-  line-height: 0.9;
+  margin: 0px 0px 5px 0px;
 }
 
-.ungu-teks {
-  color: #664CAD;
-}
-
-.teks-definisi {
-  color: #acacac;
+.teks-about {
+  color: #fff;
   font-size: 15px;
-  min-width: 250px;
+  margin: 0
+}
+
+.button {
+  width: 120px;
+  height: 40px;
+  color: #ff0000;
+  font-family: 'Poppins';
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 2px solid #ff0000;
+  margin-top: 25px;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: 'Click me';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: -120px;
+  color: #fff;
+  border-radius: 0px 100px 100px 0px;
+  /* background-color: #FF0000; */
+  background: linear-gradient(90deg, #80FF00 0%, #00FFFF 100%);
+  position: absolute;
+  z-index: 10;
+  transition: 1s;
+}
+
+.button:hover::after {
+  left: 0;
+  border-radius: 0px;
+}
+
+.container-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.anime {
+  display: none;
+}
+
+.anime-active {
+  display: block;
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  z-index: 99;
 }
