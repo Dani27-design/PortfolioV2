@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #252525;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
@@ -79,8 +80,8 @@ nav {
   flex-direction: row;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #fff;
   transition: 0.2s ease-in-out;
+  color: #fff;
 }
 
 .navi-link:hover {
@@ -117,7 +118,6 @@ nav {
   font-family: 'Poppins';
   font-weight: 600;
   font-size: 70px;
-  color: #fff;
   margin: 0px 0px 10px 0px;
 }
 
@@ -130,12 +130,10 @@ nav {
   font-family: 'Poppins';
   font-weight: 600;
   font-size: 40px;
-  color: #fff;
   margin: 0px 0px 5px 0px;
 }
 
 .teks-about {
-  color: #fff;
   font-size: 15px;
   margin: 0
 }
@@ -188,13 +186,41 @@ nav {
 }
 
 .anime {
-  display: none;
+  position: fixed;
+  top: 80%;
+  right: 3%;
+  z-index: 99;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .anime-active {
-  display: block;
   position: fixed;
   top: 80%;
-  right: 5%;
+  right: 3%;
   z-index: 99;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+  transition: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#project {
+  width: 100%;
+  height: 587px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

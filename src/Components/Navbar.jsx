@@ -30,9 +30,10 @@ function Navbar() {
 
         //TOGGLE LINK ACTIVE
         links.forEach((link, i) => {
-            link.addEventListener("click", () => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
                 //SMOOTH SCROLL
-                const targetId = link.getAttribute("name");
+                const targetId = link.getAttribute("href");
                 const duration = 1000;
                 setTimeout(() => {
                     SmoothScroll({ targetId, duration });
@@ -57,15 +58,11 @@ function Navbar() {
         <>
             <nav className={nav ? 'nav active' : 'nav'}>
                 <div className="link-con logo-gambar">
-                    <Link to="/" className="navi-link logo-gambar" name="main">
-                        <img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" />
-                    </Link>
+                    <a href="main" className="navi-link"><img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" /></a>
                 </div>
 
                 <div className="link-con menu">
-                    <Link to="/" className="navi-link" name="aboutus">
-                        Project
-                    </Link>
+                    <a href="project" className="navi-link">Project</a>
                     <Link to="/" className="navi-link" name="service">
                         Certification
                     </Link>
@@ -83,7 +80,7 @@ function Navbar() {
                         <Link to="/" className="navi-link" name="main">
                             <img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" />
                         </Link>
-                        <Link to="/" className="navi-link" name="aboutus">
+                        <Link to="/" className="navi-link" name="project">
                             Project
                         </Link>
                         <Link to="/" className="navi-link" name="service">

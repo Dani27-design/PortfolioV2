@@ -30,9 +30,10 @@ function Header() {
 
         //TOGGLE LINK ACTIVE
         links.forEach((link, i) => {
-            link.addEventListener("click", () => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
                 //SMOOTH SCROLL
-                const targetId = link.getAttribute("name");
+                const targetId = link.getAttribute("href");
                 const duration = 1000;
                 setTimeout(() => {
                     SmoothScroll({ targetId, duration });
@@ -86,9 +87,7 @@ function Header() {
                         <div className="container-button">
                             <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Hire Me</a>
                             <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Get CV</a>
-                            <Link to="/" className="button" name="gimmick">
-                                Project
-                            </Link>
+                            <a href="project" className="button">Project</a>
                         </div>
                     </div>
                     <Tilt reset={false}>
