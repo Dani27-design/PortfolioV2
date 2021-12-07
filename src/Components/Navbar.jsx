@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from "react-router-dom";
 import { WindowView, SmoothScroll } from "./Viewport";
 import { bubble as Menu } from 'react-burger-menu'
+import { Helmet } from 'react-helmet';
 
 function Navbar() {
-    
     const [nav, setnav] = useState(false);
+    const [seo, setSeo] = useState('Daniansyah');
 
     const changeBackground = () => {
         if (window.scrollY >= 50) {
@@ -34,6 +35,15 @@ function Navbar() {
                 event.preventDefault();
                 //SMOOTH SCROLL
                 const targetId = link.getAttribute("href");
+                if (targetId === "home") {
+                    setSeo("Daniansyah")
+                }
+                if (targetId === "project") {
+                    setSeo("Daniansyah | Project")
+                }
+                if (targetId === "certification") {
+                    setSeo("Daniansyah | Certification")
+                }
                 const duration = 1000;
                 setTimeout(() => {
                     SmoothScroll({ targetId, duration });
@@ -56,14 +66,15 @@ function Navbar() {
 
     return (
         <>
+            <Helmet title={seo} defer={false} />
             <nav className={nav ? 'nav active' : 'nav'}>
                 <div className="link-con logo-gambar">
-                    <a href="main" className="navi-link logo-navbar">DC<img className="dot-navbar" src={`${process.env.PUBLIC_URL}/dot-navbar.png`} alt="" /></a>
+                    <a href="home" className="navi-link logo-navbar">DC<img className="dot-navbar" src={`${process.env.PUBLIC_URL}/dot-navbar.png`} alt="" /></a>
                 </div>
 
                 <div className="link-con menu">
                     <a href="project" className="navi-link">Project</a>
-                    <Link to="/" className="navi-link" name="service">
+                    <Link to="/" className="navi-link" name="certification">
                         Certification
                     </Link>
                     <Link to="/" className="navi-link" name="porto">
@@ -77,13 +88,13 @@ function Navbar() {
                 customCrossIcon={<img className="close-icon" src={`${process.env.PUBLIC_URL}/Close.svg`} alt="" />}>
                 <nav className='navi'>
                     <div className="link-con menu">
-                        <Link to="/" className="navi-link" name="main">
+                        <Link to="/" className="navi-link" name="home">
                             <img className="logo" src={`${process.env.PUBLIC_URL}/LogoNavbar.svg`} alt="" />
                         </Link>
                         <Link to="/" className="navi-link" name="project">
                             Project
                         </Link>
-                        <Link to="/" className="navi-link" name="service">
+                        <Link to="/" className="navi-link" name="certification">
                             Certification
                         </Link>
                         <Link to="/" className="navi-link" name="porto">

@@ -1,5 +1,5 @@
 # Web Portfolio `V2.0.0`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Older version [Web Portfolio `V1.0.0`](https://dani27-design.github.io/)
 
 ## by Daniansyah

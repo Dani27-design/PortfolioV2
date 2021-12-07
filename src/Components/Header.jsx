@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Navbar from './Navbar'
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { WindowView, SmoothScroll } from "./Viewport";
 import Typed from 'typed.js';
 import Tilt from 'react-parallax-tilt';
+import { Helmet } from 'react-helmet';
 
 function Header() {
     const [anime, setanime] = useState(false);
     const [theme, setTheme] = useState(false);
+    const [seo, setSeo] = useState('Daniansyah');
 
     const setActive = () => {
         if (window.scrollY >= 50) {
@@ -41,6 +43,9 @@ function Header() {
                 event.preventDefault();
                 //SMOOTH SCROLL
                 const targetId = link.getAttribute("href");
+                if (targetId === "project") {
+                    setSeo("Daniansyah | Project")
+                }
                 const duration = 1000;
                 setTimeout(() => {
                     SmoothScroll({ targetId, duration });
@@ -81,7 +86,8 @@ function Header() {
 
     return (
         <>
-            <div id='main'>
+            <div id='home'>
+                <Helmet title={seo} defer={true} />
                 <Navbar />
                 <div className='hero'>
                     <div className='kiri'>
@@ -97,13 +103,13 @@ function Header() {
                             <a href="project" className="button">Project</a>
                         </div>
                     </div>
-                    <Tilt reset={false}>
+                    <Tilt reset={true}>
                         <div className='gambar-header'>
                             <img src={`${process.env.PUBLIC_URL}/header-image.png`} alt="" className='gambar-header' />
                         </div>
                     </Tilt>
                 </div>
-                <img id="theme" name="main" onClick={() => setTheme(!theme)} height="100" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
+                <img id="theme" onClick={() => setTheme(!theme)} height="80" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
             </div>
         </>
     )
