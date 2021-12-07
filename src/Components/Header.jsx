@@ -5,6 +5,7 @@ import { WindowView, SmoothScroll } from "./Viewport";
 import Typed from 'typed.js';
 import Tilt from 'react-parallax-tilt';
 import { Helmet } from 'react-helmet';
+import ReactTooltip from 'react-tooltip';
 
 function Header() {
     const [anime, setanime] = useState(false);
@@ -109,7 +110,19 @@ function Header() {
                         </div>
                     </Tilt>
                 </div>
-                <img id="theme" onClick={() => setTheme(!theme)} height="80" src={`${process.env.PUBLIC_URL}/lolisister.gif`} alt="" className={anime ? 'anime-active' : 'anime'} />
+                <img
+                    data-for='bubble'
+                    data-tip='Click me'
+                    onClick={() => setTheme(!theme)}
+                    src={`${process.env.PUBLIC_URL}/lolisister.gif`}
+                    alt=""
+                    className={anime ? 'anime-active' : 'anime'} />
+                <ReactTooltip
+                    id='bubble'
+                    className='bubble'
+                    textColor= {theme ? '#fff' : '#252525'}
+                    backgroundColor={theme ? '#252525' : '#fff'} 
+                    place='left' />
             </div>
         </>
     )
