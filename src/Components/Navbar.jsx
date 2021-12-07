@@ -44,6 +44,9 @@ function Navbar() {
                 if (targetId === "certification") {
                     setSeo("Daniansyah | Certification")
                 }
+                if (targetId === "contact") {
+                    setSeo("Daniansyah | Contact")
+                }
                 const duration = 1000;
                 setTimeout(() => {
                     SmoothScroll({ targetId, duration });
@@ -74,12 +77,8 @@ function Navbar() {
 
                 <div className="link-con menu">
                     <a href="project" className="navi-link">Project</a>
-                    <Link to="/" className="navi-link" name="certification">
-                        Certification
-                    </Link>
-                    <Link to="/" className="navi-link" name="porto">
-                        Contact
-                    </Link>
+                    <a href="certification" className="navi-link">Certification</a>
+                    <a href="contact" className="navi-link">Contact</a>
                 </div>
             </nav>
 

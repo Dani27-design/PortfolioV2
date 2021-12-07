@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import PacmanLoader from "react-spinners/PacmanLoader";
 import Loading from './Components/Loading';
 import Header from './Components/Header';
 import Project from './Components/Project';
+import Certification from './Components/Certification';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +21,9 @@ function App() {
       <div className='App'>
         <Header />
         <Project />
+        <Certification />
+        <Contact />
+        <Footer />
       </div>
     </Router>
   )
