@@ -7,12 +7,37 @@
   --primary-color: #252525;
   --secondary-color: #ffffff;
   --third-color: 0px 10px 30px rgba(65, 65, 65, 0.25);
+  --fourth-color: #313131;
+  --fifth-color: 10px 20px 30px rgba(65, 65, 65, 0.25);
+  --opacity: 1;
+  --six-color: linear-gradient(90deg, #8E0E00 0%, #1F1C18 100%);
+  --seven-color: #ff0000;
 }
 
 .light-theme {
   --primary-color: #fafafa;
   --secondary-color: #252525;
   --third-color: 0px 10px 30px rgba(129, 129, 129, 0.10);
+  --fourth-color: #eeeeee;
+  --fifth-color: 10px 20px 30px rgba(218, 218, 218, 0.25);
+  --opacity: 0.5;
+  --six-color: linear-gradient(90deg, #F05053 0%, #E1EEC3 100%);
+  --seven-color: #AF0404;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--seven-color);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 body {
@@ -129,7 +154,7 @@ nav {
   font-size: 1rem;
   font-weight: 700;
   transition: all ease 0.2s;
-  color: #FF0000;
+  color: var(--seven-color);
 }
 
 .hero {
@@ -183,14 +208,14 @@ nav {
 .button {
   width: 120px;
   height: 40px;
-  color: #ff0000;
+  color: var(--seven-color);
   font-family: 'Poppins';
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 7px;
-  border: 2px solid #ff0000;
+  border: 2px solid var(--seven-color);
   margin-top: 25px;
   font-size: 15px;
   position: relative;
@@ -198,7 +223,7 @@ nav {
 }
 
 .button::after {
-  content: 'Click me';
+  content: '';
   width: 100%;
   height: 100%;
   display: flex;
@@ -208,9 +233,9 @@ nav {
   left: -120px;
   color: #fff;
   border-radius: 0px 100px 100px 0px;
-  background: linear-gradient(90deg, #80FF00 0%, #00FFFF 100%);
+  background: var(--six-color);
   position: absolute;
-  z-index: 10;
+  z-index: -10;
   transition: 1s;
 }
 
@@ -295,11 +320,127 @@ nav {
 
 #project {
   width: 100%;
-  height: 587px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.container-project {
+  width: 82vw;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.container-header {
+  margin-bottom: 20px;
+}
+
+.header-project {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 40px;
+  margin: 0px 0px 5px 0px;
+}
+
+.box-image {
+  width: 528px;
+  height: 381px;
+  background-color: var(--fourth-color);
+  border-radius: 10px;
+  box-shadow: var(--fifth-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-project {
+  width: 306px;
+  height: 306px;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.container-image {
+  width: 306px;
+  height: 306px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: -350px;
+  border-radius: 10px 100px 100px 10px;
+  background-image: url("./KaloHover.png");
+  opacity: var(--opacity);
+  position: absolute;
+  z-index: 10;
+  transition: 1s;
+}
+
+.container-image:hover::after {
+  left: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-download {
+  width: 150px;
+  height: 40px;
+  color: var(--seven-color);
+  font-family: 'Poppins';
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 2px solid var(--seven-color);
+  margin-top: 25px;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-download::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: -150px;
+  color: #fff;
+  border-radius: 0px 100px 100px 0px;
+  background: var(--six-color);
+  position: absolute;
+  z-index: -10;
+  transition: 1s;
+}
+
+.button-download:hover::after {
+  left: 0;
+  border-radius: 0px;
+}
+
+.container-isi-project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-deskripsi-project {
+  width: 433px;
 }
 
 #certification {

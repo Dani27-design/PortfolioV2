@@ -19,11 +19,11 @@ function App() {
   return isLoading ? <Loading /> : (
     <Router>
       <div className='App'>
-        <Header />
-        <Project />
-        <Certification />
-        <Contact />
-        <Footer />
+          <Header />
+          <Project />
+          <Certification />
+          <Contact />
+          <Footer />
       </div>
     </Router>
   )
