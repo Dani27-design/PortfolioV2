@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @import url(//db.onlinewebfonts.com/c/5b8227fdeaf552bd1c914c751bd6e2b9?family=CoreSansNRW01-87CnHeavy);
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 :root {
   --primary-color: #252525;
@@ -16,6 +18,8 @@
   --himti: url("./Assets/HimtiHover.png");
   --portfolio: url("./Assets/PortfolioHover.png");
   --desaindoang: url("./Assets/DesainDoangHover.png");
+  --prev: url("./Assets/prev.png");
+  --next: url("./Assets/next.png");
 }
 
 .light-theme {
@@ -31,6 +35,8 @@
   --himti: url("./Assets/HimtiHover-light.png");
   --portfolio: url("./Assets/PortfolioHover-light.png");
   --desaindoang: url("./Assets/DesainDoangHover-light.png");
+  --prev: url("./Assets/prev-light.png");
+  --next: url("./Assets/next-light.png");
 }
 
 ::-webkit-scrollbar {
@@ -336,6 +342,7 @@ nav {
 
 .container-project {
   width: 82vw;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -532,6 +539,7 @@ nav {
 
 #certification {
   width: 100%;
+  height: 570px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -540,15 +548,84 @@ nav {
 
 .container-certification {
   width: 82vw;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.img {
-  height: 100%;
-  width: 100%;
+.container-header-certification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.header-certification {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 40px;
+  margin: 0px 0px 5px 0px;
+}
+
+.teks-certification {
+  font-size: 15px;
+  margin: 0
+}
+
+.slick-slide img {
+  margin: auto;
+}
+
+.slide img {
+  height: 212px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.slide {
+  transForm: scale(0.8);
+  transition: transForm 300ms;
+  opacity: 0.2;
+}
+
+.activeSlide {
+  transForm: scale(1);
+  opacity: 1;
+}
+
+.dots-slider {
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  margin-top: 15px;
+  background-color: var(--seven-color);
+}
+
+.dots-slider-active {
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+  margin-top: 14px;
+  background-color: var(--secondary-color);
+}
+
+.next {
+  position: absolute;
+  right: 20%;
+  bottom: -12%;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 10;
+  background-image: var(--next)
+}
+
+.prev {
+  position: absolute;
+  left: 20%;
+  bottom: -12%;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 10;
+  background-image: var(--prev)
 }
 
 #contact {
