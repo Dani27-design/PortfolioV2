@@ -9,9 +9,13 @@
   --third-color: 0px 10px 30px rgba(65, 65, 65, 0.25);
   --fourth-color: #313131;
   --fifth-color: 10px 20px 30px rgba(65, 65, 65, 0.25);
-  --opacity: 1;
   --six-color: linear-gradient(90deg, #8E0E00 0%, #1F1C18 100%);
   --seven-color: #ff0000;
+  --kalo: url("./Assets/KaloHover.png");
+  --mousy: url("./Assets/MousyHover.png");
+  --himti: url("./Assets/HimtiHover.png");
+  --portfolio: url("./Assets/PortfolioHover.png");
+  --desaindoang: url("./Assets/DesainDoangHover.png");
 }
 
 .light-theme {
@@ -20,9 +24,13 @@
   --third-color: 0px 10px 30px rgba(129, 129, 129, 0.10);
   --fourth-color: #eeeeee;
   --fifth-color: 10px 20px 30px rgba(218, 218, 218, 0.25);
-  --opacity: 0.5;
   --six-color: linear-gradient(90deg, #F05053 0%, #E1EEC3 100%);
   --seven-color: #AF0404;
+  --kalo: url("./Assets/KaloHover-light.png");
+  --mousy: url("./Assets/MousyHover-light.png");
+  --himti: url("./Assets/HimtiHover-light.png");
+  --portfolio: url("./Assets/PortfolioHover-light.png");
+  --desaindoang: url("./Assets/DesainDoangHover-light.png");
 }
 
 ::-webkit-scrollbar {
@@ -30,14 +38,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--seven-color);
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -128,7 +136,7 @@ nav {
   top: 0;
   width: 100%;
   height: 65px;
-  z-index: 1;
+  z-index: 100;
   background-color: transparent;
   transition: 0.6s ease-in-out;
 }
@@ -353,6 +361,51 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.box-image::before,
+.box-image::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  background: var(--six-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.box-image::before {
+  left: 0;
+  top: -3px;
+}
+
+.box-image::after {
+  right: 0;
+  bottom: -3px;
+}
+
+.box-image:hover::before,
+.box-image:hover::after {
+  animation: stroke 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes stroke {
+  0% {
+    height: 3px;
+    width: 0px;
+  }
+
+  50% {
+    height: 3px;
+    width: calc(100% + 3px);
+  }
+
+  100% {
+    height: calc(100% + 6px);
+    width: calc(100% + 3px);
+  }
 }
 
 .image-project {
@@ -379,17 +432,36 @@ nav {
   justify-content: center;
   top: 0;
   left: -350px;
-  border-radius: 10px 100px 100px 10px;
-  background-image: url("./KaloHover.png");
-  opacity: var(--opacity);
+  border-radius: 5px 100px 100px 5px;
+  opacity: 1;
   position: absolute;
   z-index: 10;
   transition: 1s;
 }
 
+.kalo::after {
+  background-image: var(--kalo);
+}
+
+.mousy::after {
+  background-image: var(--mousy);
+}
+
+.himti::after {
+  background-image: var(--himti);
+}
+
+.portfolio::after {
+  background-image: var(--portfolio);
+}
+
+.desaindoang::after {
+  background-image: var(--desaindoang);
+}
+
 .container-image:hover::after {
   left: 0;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -437,10 +509,25 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 .container-deskripsi-project {
   width: 433px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right-text {
+  text-align: right;
 }
 
 #certification {
