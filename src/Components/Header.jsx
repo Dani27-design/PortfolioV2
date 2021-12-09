@@ -95,7 +95,7 @@ function Header() {
                         <p className='teks-hello'>Hello</p>
                         <div className="container-teks-gerak">
                             <p className='teks-gerak'>Im <TeksGerak /></p>
-                            <img src={`${process.env.PUBLIC_URL}/dot.svg`} alt="" className="dot" />
+                            <img src={`${process.env.PUBLIC_URL}/dot.svg`} alt="" className="dot-teks" />
                         </div>
                         <p className='teks-about'>Are u know me so well? Let me introduce myself :)</p>
                         <div className="container-button">

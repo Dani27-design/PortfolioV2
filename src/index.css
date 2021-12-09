@@ -532,11 +532,23 @@ nav {
 
 #certification {
   width: 100%;
-  height: 587px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.container-certification {
+  width: 82vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
 }
 
 #contact {
