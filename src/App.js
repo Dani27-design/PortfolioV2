@@ -1,30 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import Loading from './Components/Loading';
-import Header from './Components/Header';
-import Project from './Components/Project';
-import Certification from './Components/Certification';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+const Header = lazy(() => import('./Components/Header'));
+const Project = lazy(() => import('./Components/Project'));
+const Certification = lazy(() => import('./Components/Certification'));
+const Contact = lazy(() => import('./Components/Contact'));
+const Footer = lazy(() => import('./Components/Footer'));
+
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-  }, []);
-
-  return isLoading ? <Loading /> : (
+  return (
     <Router>
-      <div className='App'>
+      <Suspense fallback={<Loading />}>
+        <div className='App'>
           <Header />
           <Project />
           <Certification />
           <Contact />
           <Footer />
-      </div>
+        </div>
+      </Suspense>
     </Router>
   )
 }
