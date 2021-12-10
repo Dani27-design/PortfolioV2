@@ -101,10 +101,10 @@ function Navbar() {
                 disableAutoFocus>
                 <nav className='navi'>
                     <div className="link-con menu">
-                        <a href="home" className="navi-link logo-navbar">DC<img className="dot-navbar" src={`${process.env.PUBLIC_URL}/dot-navbar.png`} alt="" /></a>
-                        <a href="project" className="navi-link">Project</a>
-                        <a href="certification" className="navi-link">Certification</a>
-                        <a href="contact" className="navi-link">Contact</a>
+                        <a href="home" name="home" className="navi-link logo-navbar">DC<img className="dot-navbar" src={`${process.env.PUBLIC_URL}/dot-navbar.png`} alt="" /></a>
+                        <a href="project" name="project" className="navi-link">Project</a>
+                        <a href="certification" name="certification" className="navi-link">Certification</a>
+                        <a href="contact" name="contact" className="navi-link">Contact</a>
                     </div>
                 </nav>
             </Menu>
