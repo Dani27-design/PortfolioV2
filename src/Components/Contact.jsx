@@ -1,16 +1,29 @@
 import React from 'react'
 import Tilt from 'react-parallax-tilt';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function Contact() {
     return (
         <div id="contact">
             <div className='hero-contact'>
                 <Tilt reset={true}>
-                    <div className='gambar-contact'>
+                    <div
+                        className='gambar-contact'
+                        data-aos="fade-right"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out-cubic">
                         <img src={`${process.env.PUBLIC_URL}/contact-image.png`} alt="" className='gambar-header' />
                     </div>
                 </Tilt>
-                <div className='kanan'>
+                <div
+                    className='kanan'
+                    data-aos="fade-left"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out-cubic">
                     <div className="container-teks-contact">
                         <p className='teks-contact'>Lets connect with me</p>
                     </div>

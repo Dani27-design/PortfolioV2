@@ -20,6 +20,9 @@ import Sertif15 from '../Assets/sertif15.png'
 import Sertif16 from '../Assets/sertif16.png'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const images = [
     Sertif1,
@@ -108,22 +111,33 @@ function Certification() {
     return (
         <div id="certification">
             <div className="container-certification">
-                <div className="container-header-certification">
+                <div
+                    className="container-header-certification"
+                    data-aos="fade-down"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out-cubic">
                     <p className="header-certification">Certification</p>
                     <p className="teks-certification">This is my achievement</p>
                 </div>
-                <Slider {...settings}>
-                    {images.map((img, idx) => (
-                        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                            <Zoom
-                                zoomMargin={idx === imageIndex ? 40 : 100}
-                                overlayBgColorStart='rgba(218, 218, 218, 0.5)'
-                                overlayBgColorEnd='rgba(129, 129, 129, 0.9)'>
-                                <img src={img} alt={img} width={300} />
-                            </Zoom>
-                        </div>
-                    ))}
-                </Slider>
+                <div
+                    data-aos="zoom-in"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out-cubic">
+                    <Slider {...settings}>
+                        {images.map((img, idx) => (
+                            <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+                                <Zoom
+                                    zoomMargin={idx === imageIndex ? 40 : 100}
+                                    overlayBgColorStart='rgba(218, 218, 218, 0.5)'
+                                    overlayBgColorEnd='rgba(129, 129, 129, 0.9)'>
+                                    <img src={img} alt={img} width={300} />
+                                </Zoom>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
         </div>
     )

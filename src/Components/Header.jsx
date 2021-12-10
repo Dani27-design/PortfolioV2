@@ -6,6 +6,9 @@ import Typed from 'typed.js';
 import Tilt from 'react-parallax-tilt';
 import { Helmet } from 'react-helmet';
 import ReactTooltip from 'react-tooltip';
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function Header() {
     const [anime, setanime] = useState(false);
@@ -91,7 +94,12 @@ function Header() {
                 <Helmet title={seo} defer={true} />
                 <Navbar />
                 <div className='hero'>
-                    <div className='kiri'>
+                    <div
+                        className='kiri'
+                        data-aos="fade-right"
+                        data-aos-delay="50"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out-cubic">
                         <p className='teks-hello'>Hello</p>
                         <div className="container-teks-gerak">
                             <p className='teks-gerak'>Im <TeksGerak /></p>
@@ -115,7 +123,12 @@ function Header() {
                         </div>
                     </div>
                     <Tilt reset={true}>
-                        <div className='gambar-header'>
+                        <div
+                            className='gambar-header'
+                            data-aos="fade-left"
+                            data-aos-delay="50"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-out-cubic">
                             <img src={`${process.env.PUBLIC_URL}/header-image.png`} alt="" className='gambar-header' />
                         </div>
                     </Tilt>
@@ -133,7 +146,7 @@ function Header() {
                     textColor={theme ? '#fff' : '#252525'}
                     backgroundColor={theme ? '#252525' : '#fff'}
                     place='left' />
-            </div>
+            </div >
         </>
     )
 }
