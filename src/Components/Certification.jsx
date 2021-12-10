@@ -76,6 +76,33 @@ function Certification() {
                 </a>
             );
         },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            }
+        ]
     };
 
     return (
@@ -88,7 +115,10 @@ function Certification() {
                 <Slider {...settings}>
                     {images.map((img, idx) => (
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                            <Zoom zoomMargin={idx === imageIndex ? 40 : 100}>
+                            <Zoom
+                                zoomMargin={idx === imageIndex ? 40 : 100}
+                                overlayBgColorStart='rgba(218, 218, 218, 0.5)'
+                                overlayBgColorEnd='rgba(129, 129, 129, 0.9)'>
                                 <img src={img} alt={img} width={300} />
                             </Zoom>
                         </div>

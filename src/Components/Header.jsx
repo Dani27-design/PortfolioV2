@@ -43,7 +43,7 @@ function Header() {
             link.addEventListener("click", (event) => {
                 event.preventDefault();
                 //SMOOTH SCROLL
-                const targetId = link.getAttribute("href");
+                const targetId = link.getAttribute("name");
                 if (targetId === "project") {
                     setSeo("Daniansyah | Project")
                 }
@@ -99,9 +99,19 @@ function Header() {
                         </div>
                         <p className='teks-about'>Are u know me so well? Let me introduce myself :)</p>
                         <div className="container-button">
-                            <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Hire Me</a>
-                            <a href="https://wa.me/6285790428078" rel="noopener noreferrer" className="button" target="_blank">Get CV</a>
-                            <a href="project" className="button">Project</a>
+                            <a
+                                href="-"
+                                className="button"
+                                onClick={() => {
+                                    window.open("mailto:muhammad.19043@mhs.unesa.ac.id?subject=I%20Want%20To%20Hire%20You&body=I%20need%20", "_self");
+                                }}>Hire Me</a>
+                            <a
+                                href="-"
+                                className="button"
+                                onClick={() => {
+                                    window.open("https://drive.google.com/file/d/17CUOqM02Jq2S17qY6S64cfXwuquVF5nS/view?usp=sharing", "_self");
+                                }}>Get CV</a>
+                            <a href="project" name="project" className="button">Project</a>
                         </div>
                     </div>
                     <Tilt reset={true}>
@@ -120,8 +130,8 @@ function Header() {
                 <ReactTooltip
                     id='bubble'
                     className='bubble'
-                    textColor= {theme ? '#fff' : '#252525'}
-                    backgroundColor={theme ? '#252525' : '#fff'} 
+                    textColor={theme ? '#fff' : '#252525'}
+                    backgroundColor={theme ? '#252525' : '#fff'}
                     place='left' />
             </div>
         </>

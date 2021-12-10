@@ -18,16 +18,16 @@ function Contact() {
                         <a href="https://wa.me/6285790428078" rel="noopener noreferrer" target="_blank">
                             <img src={`${process.env.PUBLIC_URL}/WhatsApp.svg`} alt="" className='icon-sosmed' />
                         </a>
-                        <a href="https://wa.me/6285790428078" rel="noopener noreferrer" target="_blank">
+                        <a href="https://instagram.com/danichusyaidin" rel="noopener noreferrer" target="_blank">
                             <img src={`${process.env.PUBLIC_URL}/Instagram.svg`} alt="" className='icon-sosmed' />
                         </a>
-                        <a href="https://wa.me/6285790428078" rel="noopener noreferrer" target="_blank">
+                        <a href="https://github.com/Dani27-design" rel="noopener noreferrer" target="_blank">
                             <img src={`${process.env.PUBLIC_URL}/GitHub.svg`} alt="" className='icon-sosmed' />
                         </a>
-                        <a href="https://wa.me/6285790428078" rel="noopener noreferrer" target="_blank">
+                        <a href="mailto:muhammad.19043@mhs.unesa.ac.id" rel="noopener noreferrer" target="_blank">
                             <img src={`${process.env.PUBLIC_URL}/Gmail.svg`} alt="" className='icon-sosmed' />
                         </a>
-                        <a href="https://wa.me/6285790428078" rel="noopener noreferrer" target="_blank">
+                        <a href="https://www.linkedin.com/in/daniansyahchusyaidin" rel="noopener noreferrer" target="_blank">
                             <img src={`${process.env.PUBLIC_URL}/LinkedIn.svg`} alt="" className='icon-sosmed' />
                         </a>
                     </div>
