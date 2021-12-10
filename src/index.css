@@ -7,7 +7,7 @@
 
 :root {
   --primary-color: #252525;
-  --secondary-color: #ffffff;
+  --secondary-color: #fafafa;
   --third-color: 0px 10px 30px rgba(65, 65, 65, 0.25);
   --fourth-color: #313131;
   --fifth-color: 10px 20px 30px rgba(65, 65, 65, 0.25);
@@ -608,7 +608,7 @@ nav {
 .next {
   position: absolute;
   right: 20%;
-  bottom: -12%;
+  bottom: -14%;
   width: 29px;
   height: 29px;
   cursor: pointer;
@@ -619,7 +619,7 @@ nav {
 .prev {
   position: absolute;
   left: 20%;
-  bottom: -12%;
+  bottom: -14%;
   width: 29px;
   height: 29px;
   cursor: pointer;
@@ -634,6 +634,83 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.hero-contact {
+  width: 82vw;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gambar-contact {
+  margin-left: -60px;
+  height: 450px;
+  cursor: pointer;
+}
+
+.kanan {
+  width: 458px;
+  height: 223px;
+  background-color: var(--fourth-color);
+  border-radius: 10px;
+  box-shadow: var(--fifth-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.kanan::before,
+.kanan::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  background: var(--six-color);
+  position: absolute;
+  z-index: -1;
+}
+
+.kanan::before {
+  left: 0;
+  top: -3px;
+}
+
+.kanan::after {
+  right: 0;
+  bottom: -3px;
+}
+
+.kanan:hover::before,
+.kanan:hover::after {
+  animation: stroke 1s linear;
+  animation-fill-mode: forwards;
+}
+
+.teks-contact {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0px 0px 5px 0px;
+  text-align: left;
+  width: 350px;
+}
+
+.container-sosmed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 350px;
+}
+
+.icon-sosmed {
+  width: 50px;
 }
 
 #footer {

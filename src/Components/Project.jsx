@@ -6,7 +6,7 @@ function Project() {
             <div className="container-project">
                 <div className="container-header">
                     <p className="header-project">Latest Project</p>
-                    <p className="teks-about">My latest project all u can see, hope u like it ;) </p>
+                    <p className="teks-about">Overview of my project you can see or download </p>
                 </div>
                 <div className="container-isi-project">
                     <div className="box-image">

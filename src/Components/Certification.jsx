@@ -88,7 +88,7 @@ function Certification() {
                 <Slider {...settings}>
                     {images.map((img, idx) => (
                         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-                            <Zoom zoomMargin={40}>
+                            <Zoom zoomMargin={idx === imageIndex ? 40 : 100}>
                                 <img src={img} alt={img} width={300} />
                             </Zoom>
                         </div>
