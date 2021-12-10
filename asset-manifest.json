@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "//dani27-design.github.io/PortfolioV2/static/css/main.39eb4019.chunk.css",
+    "main.js": "//dani27-design.github.io/PortfolioV2/static/js/main.786ef408.chunk.js",
+    "main.js.map": "//dani27-design.github.io/PortfolioV2/static/js/main.786ef408.chunk.js.map",
+    "runtime-main.js": "//dani27-design.github.io/PortfolioV2/static/js/runtime-main.3b489452.js",
+    "runtime-main.js.map": "//dani27-design.github.io/PortfolioV2/static/js/runtime-main.3b489452.js.map",
+    "static/css/2.cf1b1044.chunk.css": "//dani27-design.github.io/PortfolioV2/static/css/2.cf1b1044.chunk.css",
+    "static/js/2.97fe1e61.chunk.js": "//dani27-design.github.io/PortfolioV2/static/js/2.97fe1e61.chunk.js",
+    "static/js/2.97fe1e61.chunk.js.map": "//dani27-design.github.io/PortfolioV2/static/js/2.97fe1e61.chunk.js.map",
+    "index.html": "//dani27-design.github.io/PortfolioV2/index.html",
+    "static/css/2.cf1b1044.chunk.css.map": "//dani27-design.github.io/PortfolioV2/static/css/2.cf1b1044.chunk.css.map",
+    "static/css/main.39eb4019.chunk.css.map": "//dani27-design.github.io/PortfolioV2/static/css/main.39eb4019.chunk.css.map",
+    "static/js/2.97fe1e61.chunk.js.LICENSE.txt": "//dani27-design.github.io/PortfolioV2/static/js/2.97fe1e61.chunk.js.LICENSE.txt",
+    "static/media/index.css": "//dani27-design.github.io/PortfolioV2/static/media/PortfolioHover.eaa68258.png",
+    "static/media/sertif1.39cb95cb.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif1.39cb95cb.png",
+    "static/media/sertif10.13d196e0.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif10.13d196e0.png",
+    "static/media/sertif11.88440e9d.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif11.88440e9d.png",
+    "static/media/sertif12.4f005f78.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif12.4f005f78.png",
+    "static/media/sertif13.464f8312.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif13.464f8312.png",
+    "static/media/sertif14.3e9b396f.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif14.3e9b396f.png",
+    "static/media/sertif15.c472480a.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif15.c472480a.png",
+    "static/media/sertif16.b082f9c4.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif16.b082f9c4.png",
+    "static/media/sertif2.ffe16e41.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif2.ffe16e41.png",
+    "static/media/sertif3.c67054dc.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif3.c67054dc.png",
+    "static/media/sertif4.9f7a5e4b.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif4.9f7a5e4b.png",
+    "static/media/sertif5.0c49c89b.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif5.0c49c89b.png",
+    "static/media/sertif6.5853b146.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif6.5853b146.png",
+    "static/media/sertif7.1afdf0cc.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif7.1afdf0cc.png",
+    "static/media/sertif8.ed50d3aa.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif8.ed50d3aa.png",
+    "static/media/sertif9.37613531.png": "//dani27-design.github.io/PortfolioV2/static/media/sertif9.37613531.png",
+    "static/media/slick-theme.css": "//dani27-design.github.io/PortfolioV2/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b489452.js",
+    "static/css/2.cf1b1044.chunk.css",
+    "static/js/2.97fe1e61.chunk.js",
+    "static/css/main.39eb4019.chunk.css",
+    "static/js/main.786ef408.chunk.js"
+  ]
+}
