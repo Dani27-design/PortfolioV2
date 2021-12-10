@@ -268,7 +268,7 @@ nav {
 .anime {
   position: fixed;
   height: 80px;
-  top: 80%;
+  top: 50%;
   right: 3%;
   z-index: 99;
   opacity: 0;
@@ -278,7 +278,7 @@ nav {
 .anime-active {
   position: fixed;
   height: 80px;
-  top: 80%;
+  top: 77%;
   right: 3%;
   z-index: 99;
   opacity: 1;
@@ -715,9 +715,46 @@ nav {
 
 #footer {
   width: 100%;
-  height: 587px;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10vw;
+  overflow-x: hidden;
+  background-color: var(--fourth-color);
+}
+
+.logo-footer {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'CoreSansNRW01-87CnHeavy', sans-serif;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'CoreSansNRW01-87CnHeavy', sans-serif;
+  color: var(--secondary-color);
+  margin: 15px 0 0 5px;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-build {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.teks-build {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 15px;
 }
