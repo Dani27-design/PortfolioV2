@@ -825,12 +825,11 @@ nav {
   }
 
   .button {
-    /* width: 100px; */
-    padding: 15px;
+    padding: 10px;
   }
 
   .container-button {
-    width: 320px;
+    width: 100%;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
