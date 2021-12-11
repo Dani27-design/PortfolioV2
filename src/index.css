@@ -221,17 +221,20 @@ nav {
 }
 
 .button {
-  width: 120px;
+  min-width: 120px;
   height: 40px;
+  padding: 10px;
   color: var(--seven-color);
   font-family: 'Poppins';
   font-weight: 600;
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   border-radius: 7px;
   border: 2px solid var(--seven-color);
   margin-top: 25px;
+  margin-right: 10px;
   font-size: 15px;
   position: relative;
   overflow: hidden;
@@ -245,7 +248,7 @@ nav {
   align-items: center;
   justify-content: center;
   top: 0;
-  left: -120px;
+  left: -200px;
   color: #fff;
   border-radius: 0px 100px 100px 0px;
   background: var(--six-color);
@@ -262,8 +265,6 @@ nav {
 .container-button {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 400px;
 }
 
 .anime {
@@ -786,7 +787,7 @@ nav {
 
   #home {
     width: 100%;
-    height: 700px;
+    height: 800px;
     overflow: hidden;
   }
 
@@ -795,7 +796,7 @@ nav {
   }
 
   .hero {
-    height: 600px;
+    height: 700px;
     flex-direction: column;
   }
 
@@ -824,11 +825,14 @@ nav {
   }
 
   .button {
-    width: 100px;
+    /* width: 100px; */
+    padding: 15px;
   }
 
   .container-button {
     width: 320px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   #project {

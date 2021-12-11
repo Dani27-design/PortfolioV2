@@ -75,7 +75,7 @@ function Header() {
 
         useEffect(() => {
             const typed = new Typed(typeTarget.current, {
-                strings: ["Daniansyah", "Frontend Developer", "Mobile Developer", "UI Designer"],
+                strings: [" Daniansyah", " Frontend Developer", " Mobile Developer", " UI Designer"],
                 typeSpeed: 40,
                 loop: true
             });
